@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 export default class EmployeeAdd extends React.Component {
     constructor() {
         super()
-        this.submitDetails = this.submitDetails.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
-    submitDetails(e) {
+    handleSubmit(e) {
         e.preventDefault()
         const form = document.forms.employeeAdd
         const employee = {
@@ -20,14 +20,13 @@ export default class EmployeeAdd extends React.Component {
         form.email.value = ''
         form.title.value = ''
     }
-
     render() {
         return (
-            <form name="employeeAdd" onSubmit={this.submitDetails}>
-                Name: <input type="text" name="name" /><br />
-                Extension: <input type="text" name="ext" maxLength={4} /><br />
-                Email: <input type="text" name="email" /><br />
-                Title: <input type="text" name="title" /><br />
+            <form name="employeeAdd" onSubmit={this.handleSubmit}> 
+                Name: <input type="text" name="name" /><br/>
+                Extension: <input type="text" name="ext" maxLength={4} /><br/>
+                Email: <input type="text" name="email" /><br/>
+                Title: <input type="text" name="title" /><br/>
                 <button>Add</button>
             </form>
         )

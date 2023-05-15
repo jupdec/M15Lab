@@ -5,7 +5,6 @@ import EmployeeTable from './EmployeeTable.jsx';
 import EmployeeRow from './EmployeeRow.jsx';
 
 export default class EmployeeList extends React.Component {
-    // Your implementation for EmployeeList component
     render() {
         return (
             <div>
